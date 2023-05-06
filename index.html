@@ -4,28 +4,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="./tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <main>
-    <section class="card">
-      <img src="Freddy.png" alt="Freddy's bitmoji">
-      <h1>Freddy Rondon</h1>
-      <p>Backend Software Engineer.</p>
-      <p>(Also passionate about Frontend programming but not really)</p>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Click me
-      </button>      
-      
-      <!-- Links -->
-      <div class="links">
-        <a href="https://www.linkedin.com/in/frondon/" target="_blank" title="LinkedIn profile">&#128188;</a>
-        <a href="https://github.com/Freddyerf" target="_blank" title="Github profile">&#128104;&#8205;&#128187;</a>
-        <a href="https://freddyerf.medium.com/" target="_blank" title="Medium blog">&#9997;</a>
+    <main>
+      <div class="content-wrapper">
+        <!-- Add this section before the card-container div -->
+        <section class="banner">
+          <img src="./avatar/curly/Wave.png" alt="Banner image">
+          <div class="banner-content">
+            <h2>Title</h2>
+            <h3>Subtitle 1</h3>
+            <h3>Subtitle 2</h3>
+          </div>
+        </section>
+
+        <div class="card-container">
+          <!-- Add your 6 cards here -->
+          <div class="card">
+              <img src="./avatar/curly/Default.png" alt="Freddy's bitmoji">
+              <div class="card-content">
+                <h1>About me</h1>
+              </div>
+          </div>
+          <div class="card">
+            <img src="./avatar/curly/Projects.png" alt="Freddy's bitmoji">
+            <div class="card-content">
+              <h1>Projects</h1>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./avatar/curly/Contact.png" alt="Freddy's bitmoji">
+            <div class="card-content">
+              <h1>Contact me</h1>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </main>
   </body>
 </html>
-

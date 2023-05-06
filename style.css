@@ -7,40 +7,100 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Add this line */
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
 }
 
 .card {
-  width: 400px;
+  display: flex;
+  flex-direction: row;
   background-color: #ffffff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
-  text-align: center;
+  text-align: left;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.card img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Lato", sans-serif;
   margin-bottom: 0px;
   text-align: center;
 }
 
 p {
-  font-size: 20px;
+  font-size: 14px;
   font-family: "Lato", sans-serif;
   color: #4a4a4a;
   margin-top: 8px;
 }
 
-img {
-  width: 250px; 
-  height: 250px;
-  border-radius: 50%;
-  
-}
-
 .links {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 a {
   margin: 8px;
 }
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.banner img {
+  width: 40%;
+  object-fit: contain;
+}
+
+.banner-content {
+  padding: 0 30px;
+  text-align: left;
+  width: 50%;
+}
+
+.banner-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.banner-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
