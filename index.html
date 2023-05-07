@@ -5,11 +5,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./avatar/curly/Wave.png">
     <script src="https://kit.fontawesome.com/b10827bfe5.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <nav>
+        <div class="hire-me-button">
+          <a href="Freddy Rondon_Resume.pdf" target="_blank">Hire me</a>
+        </div>
         <ul>
           <li>
             <a href="#home">
@@ -60,7 +64,7 @@
       Change the 'imageFolder' variable value to switch between folders ("bun" or "curly"). 
       Requires that both folders have the same image file names. -->
     <script>
-      const imageFolder = "bun"; // Change this value to "bun" or "curly" to switch between folders
+      const imageFolder = "curly"; // Change this value to "bun" or "curly" to switch between folders
     
       document.querySelectorAll(".avatar-image[data-filename]").forEach((img) => {
         const fileName = img.getAttribute("data-filename");
