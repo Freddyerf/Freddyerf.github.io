@@ -1,46 +1,71 @@
 <html>
   <head>
-    <title>Freddy Rondon Personal Website</title>
+    <title>Freddy Rondon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b10827bfe5.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <main>
-      <div class="content-wrapper">
-        <!-- Add this section before the card-container div -->
-        <section class="banner">
-          <img src="./avatar/curly/Wave.png" alt="Banner image">
-          <div class="banner-content">
-            <h2>Title</h2>
-            <h3>Subtitle 1</h3>
-            <h3>Subtitle 2</h3>
-          </div>
-        </section>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home">
+              <img class="avatar-image" data-filename="Default.png" alt="Freddy's bitmoji">
+              About me
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              <img class="avatar-image" data-filename="Projects.png" alt="Freddy's bitmoji">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <img class="avatar-image" data-filename="Contact.png" alt="Freddy's bitmoji">
+              Contact me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="card-container">
-          <!-- Add your 6 cards here -->
-          <div class="card">
-              <img src="./avatar/curly/Default.png" alt="Freddy's bitmoji">
-              <div class="card-content">
-                <h1>About me</h1>
-              </div>
+    <main>
+      <section class="banner">
+        <img class="avatar-image" data-filename="wave.png" alt="Freddy's wave bitmoji">
+        <div class="banner-content">
+          <h1>Hi, I'm Freddy Rondon!</h1>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/frondon/" target="_blank" title="LinkedIn profile">
+            <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Freddyerf" target="_blank" title="Github profile">
+            <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:example@example.com" target="_blank" title="Medium blog">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </div>
-          <div class="card">
-            <img src="./avatar/curly/Projects.png" alt="Freddy's bitmoji">
-            <div class="card-content">
-              <h1>Projects</h1>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./avatar/curly/Contact.png" alt="Freddy's bitmoji">
-            <div class="card-content">
-              <h1>Contact me</h1>
-            </div>
-          </div>
+          <h2>I am a Backend Software Engineer </h2>
+          <h3>(Also passionate about Frontend programming but not really)</h3>
         </div>
-      </div>
+      </section>
     </main>
+
+    <!-- Sets the image folder for avatar images and populates the 'src' attribute of all image elements 
+      with the 'avatar-image' class and 'data-filename' attributes using the correct folder. 
+      Change the 'imageFolder' variable value to switch between folders ("bun" or "curly"). 
+      Requires that both folders have the same image file names. -->
+    <script>
+      const imageFolder = "bun"; // Change this value to "bun" or "curly" to switch between folders
+    
+      document.querySelectorAll(".avatar-image[data-filename]").forEach((img) => {
+        const fileName = img.getAttribute("data-filename");
+        img.setAttribute("src", `./avatar/${imageFolder}/${fileName}`);
+      });
+    </script>
   </body>
 </html>
