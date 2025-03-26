@@ -1,95 +1,53 @@
-<html>
-  <head>
-    <title>Freddy Rondon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="./avatar/curly/Wave.png">
-    <script src="https://kit.fontawesome.com/b10827bfe5.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="hire-me-button">
-          <a href="Freddy Rondon_Resume.pdf" target="_blank">Hire me</a>
-        </div>
-        <ul>
-          <li>
-            <a href="#home">
-              <img class="avatar-image" data-filename="Default.png" alt="Freddy's bitmoji">
-              About me
-            </a>
-          </li>
-          <li>
-            <a href="#projects">
-              <img class="avatar-image" data-filename="Projects.png" alt="Freddy's bitmoji">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <img class="avatar-image" data-filename="Contact.png" alt="Freddy's bitmoji">
-              Contact me
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Freddy Rondon - Stylish Personal Website</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="./avatar/curly/Wave.png"/>
+  <script src="https://kit.fontawesome.com/b10827bfe5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Freddy Rondon</div>
+    <nav>
+      <a href="#home"><img src="./avatar/curly/Default.png" alt="About Bitmoji" />About me</a>
+      <a href="#projects"><img src="./avatar/curly/Projects.png" alt="Projects Bitmoji" />Projects</a>
+      <a href="#contact"><img src="./avatar/curly/Contact.png" alt="Contact Bitmoji" />Contact me</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="banner">
-        <img class="avatar-image" data-filename="Wave.png" alt="Freddy's wave bitmoji">
-        <div class="banner-content">
-          <h1>Hi, I'm Freddy Rondon!</h1>
-          <div class="links">
-            <a href="https://www.linkedin.com/in/frondon/" target="_blank" title="LinkedIn profile">
-            <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Freddyerf" target="_blank" title="Github profile">
-            <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="mailto:example@example.com" target="_blank" title="Medium blog">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          </div>
-          <h2>I am a Backend Software Engineer </h2>
-          <h3>(Also passionate about Frontend programming but not really)</h3>
-        </div>
-      </section>
-      <section class="card-section">
-        <div class="card">
-            <img class="card-img" src="https://freddyerf.com/avatar/curly/Default.png" alt="About Me">
-            <div class="card-content">
-                <h2>About me</h2>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://freddyerf.com/avatar/curly/Projects.png" alt="Projects">
-            <div class="card-content">
-                <h2>Projects</h2>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://freddyerf.com/avatar/curly/Contact.png" alt="Contact Me">
-            <div class="card-content">
-                <h2>Contact me</h2>
-            </div>
-        </div>
-      </section>
-    </main>
+  <section class="hero" id="home">
+    <img class="avatar-image" src="./avatar/curly/Wave.png" alt="Freddy's wave bitmoji" />
+    <h1>Hi, I'm Freddy Rondon!</h1>
+    <p>A passionate Backend Software Engineer (who also enjoys Frontend but not really).</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/frondon/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Freddyerf" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:example@example.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </section>
 
-    <!-- Sets the image folder for avatar images and populates the 'src' attribute of all image elements 
-      with the 'avatar-image' class and 'data-filename' attributes using the correct folder. 
-      Change the 'imageFolder' variable value to switch between folders ("bun" or "curly"). 
-      Requires that both folders have the same image file names. -->
-    <script>
-      const imageFolder = "curly"; // Change this value to "bun" or "curly" to switch between folders
-    
-      document.querySelectorAll(".avatar-image[data-filename]").forEach((img) => {
-        const fileName = img.getAttribute("data-filename");
-        img.setAttribute("src", `./avatar/${imageFolder}/${fileName}`);
-      });
-    </script>
-  </body>
+  <section class="portfolio" id="projects">
+    <div class="portfolio-header">
+      <img src="./avatar/curly/Projects.png" alt="Projects Icon" />
+      <h2>Projects</h2>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">Project Name Placeholder 1</div>
+      <div class="portfolio-item">Project Name Placeholder 2</div>
+      <div class="portfolio-item">Project Name Placeholder 3</div>
+      <div class="portfolio-item">Project Name Placeholder 4</div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Freddy Rondon. All rights reserved.</p>
+  </footer>
+</body>
 </html>
